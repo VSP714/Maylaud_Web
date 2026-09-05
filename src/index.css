@@ -9,6 +9,16 @@
   textarea {
     @apply appearance-none bg-transparent border-0 outline-none;
   }
+
+  /* Typography — matches the mobile app's Poppins (headings) / Inter
+     (body) pairing (see may_laud lib/theme/app_theme.dart). */
+  body {
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+  }
 }
 
 @layer components {
@@ -19,14 +29,17 @@
 
 :root {
   --animate-spin: spin 1s linear infinite;
-  --primary-color: #5E35B1; /* Royal Amethyst - Primary Brand / Buttons */
-  --secondary-color: #2D1657; /* Deep Indigo - Primary Text / Headings */
-  --background-color: #FDFCFE; /* Pearl White - Background / Canvas */
-  --text-color: #2D1657; /* Deep Indigo - Primary Text / Headings */
-  --card-color: #FDFCFE; /* Pearl White - Background / Canvas */
-  --border-color: #9E97B2; /* Cool Grey-Purple - Input Borders / Secondary Text */
-  --accent-color: #E8E2F7; /* Lavender Mist - Accent / Soft Shapes */
-  --error-color: #F8E7EF; /* Soft Rose - Error / Alert (Implied) */
+  /* Maylaud brand palette — matches the mobile app's AppColors light
+     scheme (lib/theme/app_colors.dart) so web and mobile read as one
+     product. */
+  --primary-color: #0056A3;   /* Milaor Blue - Primary Brand / Buttons */
+  --secondary-color: #212529; /* Near-black - Primary Text / Headings */
+  --background-color: #F8F9FA; /* Light gray - Background / Canvas */
+  --text-color: #212529;      /* Near-black - Primary Text / Headings */
+  --card-color: #FFFFFF;      /* White - Card Surface */
+  --border-color: #E9ECEF;    /* Light gray - Input Borders / Dividers */
+  --accent-color: #F6F2FC;    /* Lavender wash - Accent / Soft Shapes */
+  --error-color: #DC3545;     /* Error / Alert */
 }
 
 .animate-fade-in {

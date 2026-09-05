@@ -5,7 +5,7 @@ import { useAuth } from "./AuthContext";
 import { supabase } from "./supabaseClient";
 
 const AdminProfilePage = () => {
-  const { currentTheme, changeTheme } = useTheme();
+  const { currentTheme, changeTheme, themes } = useTheme();
   const { user, profile, signOut } = useAuth();
   const navigate = useNavigate();
 
@@ -128,7 +128,7 @@ const AdminProfilePage = () => {
   const email = user?.email || profile?.email || "—";
   const avatarUrl =
     profile?.avatar_url ||
-    `https://api.dicebear.com/7.x/avataaars/svg?seed=${encodeURIComponent(displayName)}`;
+    `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(displayName)}&backgroundColor=0056A3&textColor=ffffff`;
   const joinDate = user?.created_at
     ? new Date(user.created_at).toLocaleDateString("en-PH", {
         year: "numeric",
@@ -244,7 +244,7 @@ const AdminProfilePage = () => {
                   <span className="font-medium capitalize">{currentTheme.name}</span>
                 </div>
                 <div className="grid grid-cols-2 gap-2">
-                  {["light", "dark", "blue", "green"].map((theme) => (
+                  {Object.keys(themes).map((theme) => (
                     <button
                       key={theme}
                       onClick={() => changeTheme(theme)}
@@ -257,16 +257,7 @@ const AdminProfilePage = () => {
                       <div className="flex items-center">
                         <div
                           className="w-4 h-4 rounded-full mr-2"
-                          style={{
-                            backgroundColor:
-                              theme === "light"
-                                ? "#3b82f6"
-                                : theme === "dark"
-                                ? "#60a5fa"
-                                : theme === "blue"
-                                ? "#1d4ed8"
-                                : "#059669",
-                          }}
+                          style={{ backgroundColor: themes[theme].primary }}
                         />
                         <span className="text-sm capitalize">{theme}</span>
                       </div>

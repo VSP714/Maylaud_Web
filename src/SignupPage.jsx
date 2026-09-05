@@ -151,10 +151,10 @@ const SignupPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-teal-100 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-purple-100 p-4">
       <div className="max-w-2xl w-full bg-white rounded-2xl shadow-xl overflow-hidden">
         <div className="md:flex">
-          <div className="md:w-1/2 bg-gradient-to-br from-blue-600 to-indigo-700 p-8 text-white">
+          <div className="md:w-1/2 bg-header-gradient p-8 text-white">
             <div className="h-full flex flex-col justify-center">
               <div className="mb-8">
                 <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-4">

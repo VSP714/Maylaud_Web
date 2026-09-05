@@ -259,7 +259,7 @@ const EmergencyHotlinePage = () => {
             <select
               value={newAlert.level}
               onChange={(e) => setNewAlert({ ...newAlert, level: e.target.value })}
-              className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700"
+              className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-white"
             >
               <option value="Low">Low</option>
               <option value="Moderate">Moderate</option>
@@ -271,7 +271,7 @@ const EmergencyHotlinePage = () => {
               placeholder="Water level (e.g. Knee-deep)"
               value={newAlert.water_level}
               onChange={(e) => setNewAlert({ ...newAlert, water_level: e.target.value })}
-              className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700"
+              className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-white"
             />
           </div>
           <input
@@ -279,7 +279,7 @@ const EmergencyHotlinePage = () => {
             placeholder="Affected areas (comma-separated, e.g. Zone 2, Purok 3)"
             value={newAlert.affected_areas}
             onChange={(e) => setNewAlert({ ...newAlert, affected_areas: e.target.value })}
-            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700"
+            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-white"
             required
           />
           <textarea
@@ -287,7 +287,7 @@ const EmergencyHotlinePage = () => {
             value={newAlert.advice}
             onChange={(e) => setNewAlert({ ...newAlert, advice: e.target.value })}
             rows={2}
-            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700"
+            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-white"
           />
           <button
             type="submit"
@@ -361,7 +361,7 @@ const EmergencyHotlinePage = () => {
                 placeholder="Service Name"
                 value={newHotline.name}
                 onChange={(e) => setNewHotline({ ...newHotline, name: e.target.value })}
-                className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700"
+                className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-white"
                 required
               />
               <input
@@ -376,14 +376,14 @@ const EmergencyHotlinePage = () => {
                 }
                 inputMode="numeric"
                 pattern="[0-9+\-\s]*"
-                className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700"
+                className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-white"
                 required
               />
             </div>
             <select
               value={newHotline.type}
               onChange={(e) => setNewHotline({ ...newHotline, type: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700"
+              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-white"
             >
               {hotlineTypes.map((t) => (
                 <option key={t} value={t}>

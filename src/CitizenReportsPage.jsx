@@ -201,7 +201,7 @@ const CitizenReportsPage = () => {
               <select
                 value={filter}
                 onChange={(e) => setFilter(e.target.value)}
-                className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700"
+                className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-white"
               >
                 <option value="all">All Reports</option>
                 {STATUS_OPTIONS.map((s) => (
@@ -220,7 +220,7 @@ const CitizenReportsPage = () => {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search reports or residents..."
-                className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 w-full md:w-64"
+                className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-white w-full md:w-64"
               />
             </div>
           </div>
@@ -443,7 +443,7 @@ const CitizenReportsPage = () => {
                   <select
                     value={selectedReport.status || "received"}
                     onChange={(e) => handleStatusChange(selectedReport.id, e.target.value)}
-                    className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700"
+                    className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-white"
                   >
                     {STATUS_OPTIONS.map((s) => (
                       <option key={s} value={s}>

@@ -127,7 +127,11 @@ const Layout = () => {
     name: profile?.name || "Admin User",
     email: profile?.email || "admin@milaor.gov.ph",
     role: "System Administrator",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Milaor",
+    avatar:
+      profile?.avatar_url ||
+      `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(
+        profile?.name || "Admin User"
+      )}&backgroundColor=0056A3&textColor=ffffff`,
   };
 
   const navigation = [

@@ -4,50 +4,31 @@ const ThemeContext = createContext();
 
 export const useTheme = () => useContext(ThemeContext);
 
+// Palette source of truth: the mobile app's AppColors design system
+// (may_laud/lib/theme/app_colors.dart) — light and dark map 1:1 to
+// AppColors.light / AppColors.dark.
 const themes = {
   light: {
     name: "light",
-    primary: "#5E35B1", // Royal Amethyst - Primary Brand / Buttons
-    secondary: "#2D1657", // Deep Indigo - Primary Text / Headings
-    background: "#FDFCFE", // Pearl White - Background / Canvas
-    text: "#2D1657", // Deep Indigo - Primary Text / Headings
-    card: "#FDFCFE", // Pearl White - Background / Canvas
-    border: "#9E97B2", // Cool Grey-Purple - Input Borders / Secondary Text
-    accent: "#E8E2F7", // Lavender Mist - Accent / Soft Shapes
-    error: "#F8E7EF", // Soft Rose - Error / Alert (Implied)
+    primary: "#0056A3", // Milaor Blue - Primary Brand / Buttons
+    secondary: "#212529", // Near-black - Primary Text / Headings
+    background: "#F8F9FA", // Light gray - Background / Canvas
+    text: "#212529", // Near-black - Primary Text / Headings
+    card: "#FFFFFF", // White - Card Surface
+    border: "#E9ECEF", // Light gray - Input Borders / Dividers
+    accent: "#F6F2FC", // Lavender wash - Accent / Soft Shapes
+    error: "#DC3545", // Error / Alert
   },
   dark: {
     name: "dark",
-    primary: "#7E57C2", // Lighter Royal Amethyst for dark mode
-    secondary: "#E8E2F7", // Lavender Mist for text in dark mode
-    background: "#1A1035", // Dark purple background
-    text: "#E8E2F7", // Lavender Mist for text
-    card: "#2D1657", // Deep Indigo for cards
-    border: "#5E35B1", // Royal Amethyst for borders
-    accent: "#5E35B1", // Royal Amethyst as accent
-    error: "#F8E7EF", // Soft Rose - Error / Alert
-  },
-  blue: {
-    name: "blue",
-    primary: "#1d4ed8", // blue-700
-    secondary: "#0ea5e9", // sky-500
-    background: "#eff6ff",
-    text: "#1e3a8a",
-    card: "#dbeafe",
-    border: "#93c5fd",
-    accent: "#dbeafe",
-    error: "#F8E7EF",
-  },
-  green: {
-    name: "green",
-    primary: "#059669", // emerald-600
-    secondary: "#10b981", // emerald-500
-    background: "#ecfdf5",
-    text: "#065f46",
-    card: "#d1fae5",
-    border: "#a7f3d0",
-    accent: "#d1fae5",
-    error: "#F8E7EF",
+    primary: "#66B5FF", // Softened blue for dark mode
+    secondary: "#E9ECEF", // Near-white text in dark mode
+    background: "#121212", // Dark background
+    text: "#E9ECEF", // Near-white text
+    card: "#1E1E1E", // Dark surface for cards
+    border: "#444444", // Dark mode borders
+    accent: "#252030", // Muted purple-tinted surface
+    error: "#CF6679", // Error / Alert (dark mode)
   },
 };
 
