@@ -365,10 +365,17 @@ const EmergencyHotlinePage = () => {
                 required
               />
               <input
-                type="text"
+                type="tel"
                 placeholder="Phone Number"
                 value={newHotline.number}
-                onChange={(e) => setNewHotline({ ...newHotline, number: e.target.value })}
+                onChange={(e) =>
+                  setNewHotline({
+                    ...newHotline,
+                    number: e.target.value.replace(/[^0-9+\-\s]/g, ""),
+                  })
+                }
+                inputMode="numeric"
+                pattern="[0-9+\-\s]*"
                 className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700"
                 required
               />
