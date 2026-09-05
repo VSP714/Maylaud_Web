@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { supabase } from "./supabaseClient";
 
-const hotlineTypes = ["General", "Police", "Fire", "Medical", "Disaster", "Social"];
+const hotlineTypes = ["General", "Police", "Fire", "Medical", "Disaster", "Social", "Utility"];
 
 const EmergencyHotlinePage = () => {
   const [hotlines, setHotlines] = useState([]);
